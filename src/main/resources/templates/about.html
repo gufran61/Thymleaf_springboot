@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1>we are learning spring boot</h1>
+	<h1 th:text="${#strings.toUpperCase(name)}"></h1>
+	<h1 th:text="${currentdate}"></h1>
+	<p>length of the name is<span th:text="${#strings.length(name)}"></span></p>
+	<div th:with="a=5,b=6,n=${name}">
+	<h1>value of a is<span th:text="${a}"></span></h1>
+	<h1 th:text="'value of b is '+${b}"></h1>
+	</div>
+</body>
+</html>
