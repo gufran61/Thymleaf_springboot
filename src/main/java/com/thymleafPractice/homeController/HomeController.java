@@ -26,4 +26,14 @@ public class HomeController {
 		model.addAttribute("itr",of);
 		return "iterate";
 	}
+	//handler for conditional statement
+	@GetMapping("/condition")
+	public String conditionHandler(Model m) {
+		System.out.println("conditional handler execute");
+		m.addAttribute("isActive", false);
+		m.addAttribute("gender", "f");
+		List<Integer> list = List.of();
+		m.addAttribute("mylist", list);
+		return "condition";
+	}
 }
