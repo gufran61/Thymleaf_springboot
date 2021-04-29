@@ -45,4 +45,14 @@ public class HomeController {
 {
 		m.addAttribute("title", "i like toeat biryani");
 		m.addAttribute("subtitle", LocalDateTime.now().toString());
-		return "service";}}
+		return "service";}
+//for new about
+	@GetMapping("/newabout")
+	public String newAbout() {
+		return "aboutNew";
+	}
+	@GetMapping("/contact")
+	public String contact() {
+		return "contact";
+	}
+}
