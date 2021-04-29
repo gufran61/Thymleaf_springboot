@@ -1,5 +1,6 @@
 package com.thymleafPractice.homeController;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -42,4 +43,6 @@ public class HomeController {
 	@GetMapping("/service")
 	public String serviceHandler(Model m)
 {
+		m.addAttribute("title", "i like toeat biryani");
+		m.addAttribute("subtitle", LocalDateTime.now().toString());
 		return "service";}}

@@ -6,8 +6,10 @@
 	<title>Footer Template</title>
 </head>
 <body>
-	<footer id="fragmentTag" th:fragment="footer1">
+	<footer id="fragmentTag" th:fragment="footer1(title,subtitle)">
 	<div class="container">
+	<h1 th:text="${title}"></h1>
+	<h1 th:text="${subtitle}"></h1>
 	<h1>about gufran</h1>
 	<h1>Provide Good Content about programing</h1>
 	<h1>feel free to contact me </h1>
