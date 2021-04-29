@@ -12,21 +12,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 
-	@RequestMapping(value = "/about",method = RequestMethod.GET)
+	@RequestMapping(value = "/about", method = RequestMethod.GET)
 	public String about(Model model) {
 		model.addAttribute("name", "gufran");
 		model.addAttribute("currentdate", new Date());
 		System.out.println("inside about handler");
 		return "about";
-		
-		}
+
+	}
+
 	@GetMapping("/example-loop")
 	public String iterateHandler(Model model) {
-		List<String> of = List.of("gufran","farid","malik","fahad");
-		model.addAttribute("itr",of);
+		List<String> of = List.of("gufran", "farid", "malik", "fahad");
+		model.addAttribute("itr", of);
 		return "iterate";
 	}
-	//handler for conditional statement
+
+	// handler for conditional statement
 	@GetMapping("/condition")
 	public String conditionHandler(Model m) {
 		System.out.println("conditional handler execute");
@@ -36,4 +38,8 @@ public class HomeController {
 		m.addAttribute("mylist", list);
 		return "condition";
 	}
-}
+	//handler for including fragments
+	@GetMapping("/service")
+	public String serviceHandler(Model m)
+{
+		return "service";}}
